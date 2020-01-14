@@ -41,7 +41,7 @@ namespace Microsoft.BotBuilderSamples.Bots
         {
             foreach (var member in membersAdded)
             {
-                //if (member.Id != turnContext.Activity.Recipient.Id)
+                if (member.Id != turnContext.Activity.Recipient.Id)
                 {
                     await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome to Aero QnA Service!"), cancellationToken);
                 }
